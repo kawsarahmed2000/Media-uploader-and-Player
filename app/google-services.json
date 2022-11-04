@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1037770521684",
+    "project_id": "assignment-for-vasukam",
+    "storage_bucket": "assignment-for-vasukam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037770521684:android:ea8839fd18397dd6e641c1",
+        "android_client_info": {
+          "package_name": "com.vasukammedia.kawsar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037770521684-0mvvnbaa83lmf4v1te1a5c9adhf0sfce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR6_gNZSle1s_uFWPeMoGAz0nT0kC_Ivo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037770521684-0mvvnbaa83lmf4v1te1a5c9adhf0sfce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_280sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/btn_background_gradient"
+    android:backgroundTint="@color/white"
+    android:gravity="top|center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:src="@drawable/ic_baseline_close_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addTVLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center"
+        android:text="Add photo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp" />
+
+    <LinearLayout
+        android:id="@+id/uploadMedia"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/background_dotted_border"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/vasukam_logo"
+            android:scaleType="centerCrop"
+            android:id="@+id/thumbnailMedia"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/addImage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:alpha="0.5"
+            android:src="@drawable/add_24" />
+
+        <TextView
+            android:id="@+id/uploadMediaTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato"
+            android:gravity="center"
+            android:text="Upload Audio"
+            android:textColor="@color/pink"
+            android:textSize="@dimen/_11ssp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/mediaTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/background_dotted_border"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:hint="Audio title"
+        android:inputType="textCapSentences"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textColorHint="#666666"
+        android:textSize="@dimen/_14ssp" />
+
+    <EditText
+        android:id="@+id/mediaOriginName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/background_dotted_border"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:hint="Album/Film name"
+        android:inputType="textCapSentences"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textColorHint="#666666"
+        android:textSize="@dimen/_14ssp" />
+
+    <Button
+        android:id="@+id/addMediaBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_background_gradient"
+        android:fontFamily="@font/lato_bold"
+        android:text="Add Audio"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14ssp"
+        app:backgroundTint="@null" />
+</LinearLayout>

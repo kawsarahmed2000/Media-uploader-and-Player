@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white2"
+            app:tabTextColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        app:controller_layout_id="@layout/view_player_controller"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/controlBar" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:backgroundTint="@color/purple_500"
+        app:icon="@drawable/add_24"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/controlBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_audio_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/purple_200"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_fab"
+        app:srcCompat="@drawable/add_audio" />
+
+    <TextView
+        android:id="@+id/add_audio_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/lato"
+        android:text="Add Audio"
+        android:textColor="@color/black_2"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_audio_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_audio_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_audio_fab" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_video_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:backgroundTint="@color/purple_200"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/add_audio_fab"
+        app:layout_constraintEnd_toEndOf="@+id/add_audio_fab"
+        app:layout_constraintStart_toStartOf="@+id/add_audio_fab"
+        app:srcCompat="@drawable/add_video" />
+
+    <TextView
+        android:id="@+id/add_video_action_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/lato"
+        android:text="Add Video"
+        android:textColor="@color/black_2"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_video_fab"
+        app:layout_constraintEnd_toStartOf="@+id/add_video_fab"
+        app:layout_constraintTop_toTopOf="@+id/add_video_fab" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/controlBar"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@color/white3"
+        android:paddingBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/audioThumbnailHome"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/vasukam_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:riv_corner_radius="@dimen/_5sdp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/audioThumbnailHome"
+            app:layout_constraintStart_toEndOf="@+id/audioThumbnailHome"
+            app:layout_constraintTop_toTopOf="@+id/audioThumbnailHome">
+
+            <TextView
+                android:id="@+id/audioTitleHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_bold"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12ssp" />
+
+            <TextView
+                android:id="@+id/audioCategoryHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato"
+                android:text="Category"
+                android:textColor="@color/black_2"
+                android:textSize="@dimen/_11ssp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/audioPrev"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_skip_previous_24"
+            app:layout_constraintBottom_toBottomOf="@id/audioThumbnailHome"
+            app:layout_constraintEnd_toStartOf="@id/audioPlayPause"
+            app:layout_constraintTop_toTopOf="@id/audioThumbnailHome" />
+
+        <ImageView
+            android:id="@+id/audioPlayPause"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/play_arrow_24"
+            app:layout_constraintBottom_toBottomOf="@id/audioThumbnailHome"
+            app:layout_constraintEnd_toStartOf="@id/audioNext"
+            app:layout_constraintTop_toTopOf="@id/audioThumbnailHome" />
+
+        <ImageView
+            android:id="@+id/audioNext"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="end|center"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:alpha="0.8"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_next_24"
+            app:layout_constraintBottom_toBottomOf="@id/audioThumbnailHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/audioThumbnailHome" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <com.google.android.exoplayer2.ui.PlayerView-->
+    <!--        android:id="@+id/exoplayerView"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent">-->
+
+    <!--        <ProgressBar-->
+    <!--            android:id="@+id/progressBar"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:visibility="invisible" />-->
+
+    <!--    </com.google.android.exoplayer2.ui.PlayerView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
